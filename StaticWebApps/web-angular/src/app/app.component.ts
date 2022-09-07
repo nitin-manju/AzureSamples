@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-angular';
+  apiResult = "";
+  constructor()
+  {
+    this.callApi();
+  }
+
+  async callApi(){
+    this.apiResult  = await (await fetch(`/api/HttpExample`)).json();
+  }
 }

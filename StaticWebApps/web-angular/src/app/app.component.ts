@@ -14,6 +14,6 @@ export class AppComponent {
   }
 
   async callApi(){
-    this.apiResult  = await (await fetch(`/api/HttpExample`)).json();
+    this.apiResult  = await (await fetch(`/api/message`)).json();
   }
 }

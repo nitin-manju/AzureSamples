@@ -16,5 +16,5 @@ namespace api
         {            
             return new JsonResult("Hello from the function API!");
         }
-    }
+    } 
 }

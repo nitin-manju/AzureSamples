@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'web-angular';
-  apiResult = "";
+  apiResult = "...";
   constructor()
   {
     this.callApi();
   }
 
   async callApi(){
-    this.apiResult  = await (await fetch(`/api/message`)).json();
+    var result =  await (await fetch(`/api/message`)).json();
+    this.apiResult = result.text;
   }
 }
